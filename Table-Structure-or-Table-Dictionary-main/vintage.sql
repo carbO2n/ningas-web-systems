@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2024 at 07:51 PM
+-- Generation Time: Jun 03, 2024 at 07:34 AM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,7 +41,6 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id`, `name`, `price`, `image`, `quantity`, `user_id`) VALUES
-(34, 'Vintage Bootleg Kurt Cobain', 40.00, 'Vintage Bootleg Kurt Cobain.jpg', 1, 10),
 (97, '2002 Down', 3500.00, '2002 Down.jpg', 1, 7),
 (98, '2002 Down', 3500.00, '2002 Down.jpg', 1, 9),
 (99, '2020 Thy Art Is Murder Imminent World Tour', 25.00, '2020 Thy Art Is Murder Imminent World Tour.jpg', 1, 9);
@@ -83,23 +82,8 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `name`, `phone_number`, `method`, `courier`, `province`, `city`, `barangay`, `street`, `total_products`, `total_price`, `order_status`, `cancel_status`, `payment_status`, `tracking_number`, `user_id`, `order_date`, `reference_number`, `gcash_amount`, `gcash_account_name`, `gcash_account_number`, `shipping_international`, `island`) VALUES
-(133, 'justine', '123', 'gcash', 'j&t', 'albay', 'ligao', 'visayas', 'p1', '2002 Down (1) ', 60.00, 1, 0, 1, 'YXN17J1CDR', 0, '2024-06-03', '100000', 60.00, 'john omar', '09215671', 0, ''),
-(134, 'justine', '123', 'gcash', 'j&t', 'albay', 'ligao', 'visayas', 'p1', '', 0.00, 1, 0, 1, '3LC16669V1', 0, '2024-06-03', '100000', 60.00, 'john omar', '09215671', 0, ''),
-(135, 'justine', '123', 'gcash', 'j&t', 'albay', 'ligao', 'visayas', 'p1', '', 0.00, 1, 0, 1, '5FWF21BVRX', 0, '2024-06-03', '100000', 60.00, 'john omar', '09215671', 0, ''),
-(136, 'justine', '123', 'gcash', 'j&t', 'albay', 'ligao', 'visayas', 'p1', '', 0.00, 1, 0, 1, '2WSL462ZDU', 0, '2024-06-03', '100000', 60.00, 'john omar', '09215671', 0, ''),
-(137, 'justine', '123', 'gcash', 'j&t', 'albay', 'ligao', 'oyama', 'p1', '', 0.00, 1, 0, 1, '9R2KUISXAM', 0, '2024-06-03', '100000', 60.00, 'john omar', '09215671', 0, 'Visayas'),
-(138, 'justine', '123', 'gcash', 'j&t', 'albay', 'ligao', 'oyama', 'p1', '', 0.00, 1, 0, 1, '0PAIAIIH0V', 0, '2024-06-03', '100000', 60.00, 'john omar', '09215671', 0, 'Visayas'),
-(139, 'justine', '123', 'gcash', 'j&t', 'albay', 'ligao', 'oyama', 'p1', '', 0.00, 1, 0, 1, 'DOU9WKLCK3', 0, '2024-06-03', '100000', 60.00, 'john omar', '09215671', 0, 'Visayas'),
-(140, 'justine', '123', 'gcash', 'j&t', 'albay', 'ligao', 'oyama', 'p1', '', 0.00, 1, 0, 1, '5FPB9HJ900', 0, '2024-06-03', '100000', 60.00, 'john omar', '09215671', 0, 'Visayas'),
-(141, 'justine', '123', 'gcash', 'j&t', 'albay', 'ligao', 'oyama', 'p1', '2002 Down (1) ', 60.00, 1, 0, 1, 'HKH7MGNL8T', 0, '2024-06-03', '1234', 123.00, 'john', '09215671', 0, 'Mindanao'),
-(142, 'justine', '124', 'cash on delivery', 'j&t', 'albay', 'ligao', 'oyama', 'p1', '2002 Down (1) ', 3500.00, 1, 0, 1, 'YPYSCT6HJL', 0, '2024-06-03', '', 0.00, '', '', 0, 'Luzon'),
-(143, 'justine', '124', 'cash on delivery', 'j&t', 'albay', 'ligao', 'oyama', 'p1', '', 95.00, 1, 0, 1, 'YBT4W4AHCE', 0, '2024-06-03', '', 0.00, '', '', 0, 'Luzon'),
-(144, 'justine', '123', 'gcash', 'j&t', 'albay', 'ligao', 'oyama', 'p1', '2002 Down (1) ', 3595.00, 1, 0, 1, '6X2B4IW5PX', 0, '2024-06-03', '1234', 1234.00, 'john omar', '09215671', 0, 'Luzon'),
-(145, 'justine', '21344', 'cash on delivery', 'j&t', 'albay', 'ligao', 'oyama', 'p1', '2002 Down (1) ', 3595.00, 1, 0, 1, '5LAU3AM4M6', 0, '2024-06-03', '', 0.00, '', '', 0, 'Luzon'),
-(146, 'justine', '123', 'cash on delivery', 'j&t', 'albay', 'ligao', 'oyama', 'p1', '2002 Down (1) ', 3595.00, 1, 0, 1, '1UY7KV7TMY', 0, '2024-06-03', '', 0.00, '', '', 0, 'Luzon'),
-(147, 'justine', '1234', 'cash on delivery', 'j&t', 'albay', 'ligao', 'oyama', 'p1', '2002 Down (1) ', 3500.00, 1, 0, 1, 'WT54MO4HYE', 0, '2024-06-03', '', 0.00, '', '', 0, 'Luzon'),
-(148, 'justine', '1234', 'cash on delivery', 'j&t', 'albay', 'ligao', 'oyama', 'p1', '2002 Down (1) ', 3595.00, 1, 0, 1, 'NFVE35BL9S', 9, '2024-06-03', '', 0.00, '', '', 0, 'Luzon'),
-(149, 'justine', '423', 'gcash', 'j&t', 'albay', 'ligao', 'oyama', 'p1', '2002 Down (1) ', 3595.00, 1, 0, 1, 'FFQLMSPEL6', 9, '2024-06-03', '100000', 3595.00, 'john omar', '09215671', 0, 'Luzon');
+(155, 'Simone', '09123456789', 'gcash', 'J&T Express', 'Albay', 'Ligao', 'Tuburan', 'National Highway', 'Vintage Bootleg Kurt Cobain (1) ', 2400.00, 0, 0, 1, 'U3NR32VDJ3', 10, '2024-06-03', '2132131321', 2495.00, 'Simone', '09123456789', 0, 'Luzon'),
+(156, 'Simone', '09123456789', 'gcash', 'Flash Express', 'Albay', 'Ligao CIty', 'Tuburan', 'National Highway', '2009 Nirvana Bleach (1) ', 1195.00, 1, 0, 1, 'BJBM0LTLC9', 10, '2024-06-03', '6546876545', 1195.00, 'Simone', '09123456789', 0, 'Luzon');
 
 -- --------------------------------------------------------
 
@@ -121,16 +105,16 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `price`, `image`, `quantity`, `status`) VALUES
-(1, '2002 Down', 3500.00, '2002 Down.jpg', 3, 'a'),
-(2, 'Vintage Bootleg Kurt Cobain', 40.00, 'Vintage Bootleg Kurt Cobain.jpg', -1, 'a'),
-(3, '2000 Darkthrone Under a Funeral Moon', 40.00, 'product5.jpg', 0, 'a'),
-(4, '2002 Deftones Def Leppard Inspired Logo', 200.00, 'product4.jpg', 0, 'a'),
-(5, '2019 Knotfest', 35.00, '2019 Knotfest.jpg', 0, 'a'),
-(6, '2003 Exhumed Anatomy is Destiny', 55.00, '2003 Exhumed Anatomy Is Destiny.jpg', 0, 'a'),
-(7, '2020 Thy Art Is Murder Imminent World Tour', 25.00, '2020 Thy Art Is Murder Imminent World Tour.jpg', 1, 'a'),
-(8, '1996 At The Gates Slaughter of the Soul', 100.00, '1996 At The Gates Slaughter of the Soul.jpg', 1, 'a'),
-(9, '2009 Nirvana Bleach', 20.00, 'nirvana bleach.jpg', 0, 'a'),
-(10, 'Gorillaz Humanz', 20.00, 'model6.jpg', 0, 'a'),
+(1, '2002 Down', 3500.00, 'down.jpg', 1, 'a'),
+(2, 'Vintage Bootleg Kurt Cobain', 2400.00, 'Vintage Bootleg Kurt Cobain.jpg', 1, 'a'),
+(3, '2000 Darkthrone Under a Funeral Moon', 2500.00, 'product5.jpg', 1, 'a'),
+(4, '2002 Deftones Def Leppard Inspired Logo', 12000.00, 'product4.jpg', 1, 'a'),
+(5, '2019 Knotfest', 2100.00, 'knotfest.jpg', 1, 'a'),
+(6, '2003 Exhumed Anatomy is Destiny', 3220.00, 'exhumed.jpg', 1, 'a'),
+(7, '2020 Thy Art Is Murder Imminent World Tour', 1500.00, 'thy art.jpg', 1, 'a'),
+(8, '1996 At The Gates Slaughter of the Soul', 6000.00, 'at the gates.jpg', 1, 'a'),
+(9, '2009 Nirvana Bleach', 1100.00, 'PXL_20230907_094502892~2.jpg', 1, 'a'),
+(10, 'Gorillaz Humanz', 1200.00, 'IMG_20230508_115954.jpg', 1, 'a'),
 (27, 'John Doe', 40.00, 'model2.jpg', 0, 'a');
 
 -- --------------------------------------------------------
@@ -202,13 +186,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
 
 --
 -- AUTO_INCREMENT for table `products`
